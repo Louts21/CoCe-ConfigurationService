@@ -1,3 +1,14 @@
 spring:
   application:
     name: CoCe-ConfigurationService
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coce_configuration_service
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
