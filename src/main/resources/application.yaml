@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: CoCe-ConfigurationService
@@ -12,3 +13,5 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: ${CONFIGURATION_SERVICE_PORT:8080}
