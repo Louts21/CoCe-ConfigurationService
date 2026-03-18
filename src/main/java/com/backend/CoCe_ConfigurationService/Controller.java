@@ -1,6 +1,6 @@
 package com.backend.CoCe_ConfigurationService;
 
-import com.backend.CoCe_ConfigurationService.models.ConfigurationDTO;
+import com.backend.CoCe_ConfigurationService.models.Configuration;
 import com.backend.CoCe_ConfigurationService.services.ConfigurationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class Controller {
     }
 
     @GetMapping("/configuration")
-    public ResponseEntity<ConfigurationDTO> getConfiguration() {
+    public ResponseEntity<Configuration> getConfiguration() {
         return new ResponseEntity<>(configurationService.getConfiguration(), HttpStatus.OK);
     }
 

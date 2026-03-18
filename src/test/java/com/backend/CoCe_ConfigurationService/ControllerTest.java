@@ -24,7 +24,7 @@ class ControllerTest {
 
     @Test
     void getConfiguration_returnsOkWithConfigurationDTO() {
-        ConfigurationDTO dto = new ConfigurationDTO(
+        Configuration dto = new Configuration(
                 new CarModelDTO[]{new CarModelDTO("1", "Model S", 50000)},
                 new CarEngineDTO[]{new CarEngineDTO("1", "V8", 8000)},
                 new CarPaintDTO[]{new CarPaintDTO("1", "Red", 500)},
@@ -33,7 +33,7 @@ class ControllerTest {
         );
         when(configurationService.getConfiguration()).thenReturn(dto);
 
-        ResponseEntity<ConfigurationDTO> response = controller.getConfiguration();
+        ResponseEntity<Configuration> response = controller.getConfiguration();
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());

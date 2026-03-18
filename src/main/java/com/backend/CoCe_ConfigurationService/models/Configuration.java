@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ConfigurationDTO {
+public class Configuration {
 
     private CarModelDTO[] carModelDTO;
     private CarEngineDTO[] carEngineDTO;
@@ -13,8 +13,8 @@ public class ConfigurationDTO {
     private CarWheelDTO[] carWheelDTO;
     private CarExtraDTO[] carExtraDTO;
 
-    public ConfigurationDTO(CarModelDTO[] carModelDTO, CarEngineDTO[] carEngineDTO, CarPaintDTO[] carPaintDTO,
-                            CarWheelDTO[] carWheelDTO, CarExtraDTO[] carExtraDTO) {
+    public Configuration(CarModelDTO[] carModelDTO, CarEngineDTO[] carEngineDTO, CarPaintDTO[] carPaintDTO,
+                         CarWheelDTO[] carWheelDTO, CarExtraDTO[] carExtraDTO) {
         this.carModelDTO = carModelDTO;
         this.carEngineDTO = carEngineDTO;
         this.carPaintDTO = carPaintDTO;

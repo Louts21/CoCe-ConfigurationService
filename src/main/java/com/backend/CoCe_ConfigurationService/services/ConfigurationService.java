@@ -28,7 +28,7 @@ public class ConfigurationService {
         this.carWheelRepository = carWheelRepository;
     }
 
-    public ConfigurationDTO getConfiguration() {
+    public Configuration getConfiguration() {
         List<CarEngine> engines = carEngineRepository.findAll();
         List<CarExtra> extras = carExtraRepository.findAll();
         List<CarModel> models = carModelRepository.findAll();
@@ -55,7 +55,7 @@ public class ConfigurationService {
                 .map(Mapper::toCarWheelDTO)
                 .toArray(CarWheelDTO[]::new);
 
-        return new ConfigurationDTO(modelDTOs, engineDTOs, paintDTOs, wheelDTOs, extraDTOs);
+        return new Configuration(modelDTOs, engineDTOs, paintDTOs, wheelDTOs, extraDTOs);
     }
 
 }
