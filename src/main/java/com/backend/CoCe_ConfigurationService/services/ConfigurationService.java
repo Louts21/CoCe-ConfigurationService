@@ -36,7 +36,7 @@ public class ConfigurationService {
         List<CarWheel> wheels = carWheelRepository.findAll();
 
         CarEngineDTO[] engineDTOs = engines.stream()
-                .map(Mapper::carEngineDTO)
+                .map(Mapper::toCarEngineDTO)
                 .toArray(CarEngineDTO[]::new);
 
         CarExtraDTO[] extraDTOs = extras.stream()
@@ -48,7 +48,7 @@ public class ConfigurationService {
                 .toArray(CarModelDTO[]::new);
 
         CarPaintDTO[] paintDTOs = paints.stream()
-                .map(Mapper::carPaintDTO)
+                .map(Mapper::toCarPaintDTO)
                 .toArray(CarPaintDTO[]::new);
 
         CarWheelDTO[] wheelDTOs = wheels.stream()

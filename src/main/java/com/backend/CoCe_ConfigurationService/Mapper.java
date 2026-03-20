@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 public class Mapper {
 
-    public static CarEngineDTO carEngineDTO(CarEngine carEngine) {
+    public static CarEngineDTO toCarEngineDTO(CarEngine carEngine) {
         return new CarEngineDTO(carEngine.getId().toString(), carEngine.getName(), carEngine.getPrice());
     }
 
@@ -18,7 +18,7 @@ public class Mapper {
         return new CarModelDTO(carModel.getId().toString(), carModel.getName(), carModel.getPrice());
     }
 
-    public static CarPaintDTO carPaintDTO(CarPaint carPaint) {
+    public static CarPaintDTO toCarPaintDTO(CarPaint carPaint) {
         return new CarPaintDTO(carPaint.getId().toString(), carPaint.getName(), carPaint.getPrice());
     }
 
