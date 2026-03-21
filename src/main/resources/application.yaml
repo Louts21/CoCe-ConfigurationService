@@ -2,6 +2,7 @@
 spring:
   application:
     name: CoCe-ConfigurationService
+    frontend-url: ${FRONTEND_URL:http://localhost:5173/}
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/coce_configurations}
     username: ${DATABASE_USERNAME:postgres}
